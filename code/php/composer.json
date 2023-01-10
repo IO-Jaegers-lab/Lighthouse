@@ -1,0 +1,19 @@
+{
+    "name": "io-jaegers/lighthouse",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IoJaegers\\Lighthouse\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kent vejrup madsen",
+            "email": "kent.vejrup.madsen@outlook.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

@@ -1,0 +1,5 @@
+<?php
+    namespace IoJaegers\Lighthouse;
+
+
+?>
