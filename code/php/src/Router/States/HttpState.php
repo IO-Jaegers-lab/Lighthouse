@@ -1,6 +1,6 @@
 <?php
     /**
-     *
+     * nginx - php-fpm = fpm-fcgi
      */
     namespace IoJaegers\Lighthouse\Router\States;
 
@@ -20,16 +20,13 @@
         {
             switch( $this->getDetectState() )
             {
-                case HttpState::UsingWebInterface:
+                case self::UsingWebInterface:
                     return true;
 
                 case HttpState::UsingHttp:
                     return true;
 
                 case HttpState::UsingHttps:
-                    return true;
-
-                default:
                     return true;
             }
 

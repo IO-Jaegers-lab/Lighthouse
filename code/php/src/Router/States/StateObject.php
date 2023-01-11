@@ -10,11 +10,11 @@
     {
         public function __construct()
         {
-            $this->setDetectState( 0 );
+
         }
 
         // Variables
-        private ?int $detect_state;
+        private int $detect_state = 0;
 
 
         // Accessors
