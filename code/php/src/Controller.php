@@ -18,7 +18,16 @@
         HTTP:
     </p>
     <p>
-        <?php echo $controller->isHTTP()?>
+        <?php
+            if($controller->isHTTP())
+            {
+                echo "true";
+            }
+            else
+            {
+                echo "false";
+            }
+        ?>
     </p>
 </div>
 <div>
@@ -26,7 +35,16 @@
         HTTPS:
     </p>
     <p>
-        <?php echo $controller->isHTTPS()?>
+        <?php
+        if($controller->isHTTPS())
+        {
+            echo "true";
+        }
+        else
+        {
+            echo "false";
+        }
+        ?>
     </p>
 </div>
 </html>
