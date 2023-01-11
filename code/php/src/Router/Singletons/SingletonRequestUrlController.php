@@ -2,7 +2,9 @@
     /**
      *
      */
-    namespace IoJaegers\Lighthouse\Router;
+    namespace IoJaegers\Lighthouse\Router\Singletons;
+
+    use IoJaegers\Lighthouse\Router\RequestUrlController;
 
 
     class SingletonRequestUrlController

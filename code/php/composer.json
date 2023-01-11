@@ -7,10 +7,8 @@
         "psr-4":
         {
             "IoJaegers\\": "/",
-
-            "IoJaegers\\Lighthouse\\": "src/",
-
-            "IoJaegers\\Lighthouse\\Router\\": "src/Router/"
+            "IoJaegers\\Lighthouse\\Setup": "src/Setup",
+            "IoJaegers\\Lighthouse\\": "src/"
         }
     },
     "authors":
