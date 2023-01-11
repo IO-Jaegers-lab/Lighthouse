@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/code/crons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />

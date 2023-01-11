@@ -2,18 +2,26 @@
     "name": "io-jaegers/lighthouse",
     "type": "project",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "IoJaegers\\Lighthouse\\": "src/"
+    "autoload":
+    {
+        "psr-4":
+        {
+            "IoJaegers\\": "/",
+
+            "IoJaegers\\Lighthouse\\": "src/",
+
+            "IoJaegers\\Lighthouse\\Router\\": "src/Router/"
         }
     },
-    "authors": [
+    "authors":
+    [
         {
             "name": "kent vejrup madsen",
             "email": "kent.vejrup.madsen@outlook.com"
         }
     ],
-    "require": {
+    "require":
+    {
         "vlucas/phpdotenv": "^5.5"
     }
 }
