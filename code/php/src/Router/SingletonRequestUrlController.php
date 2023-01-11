@@ -1,4 +1,7 @@
 <?php
+    /**
+     *
+     */
     namespace IoJaegers\Lighthouse\Router;
 
 

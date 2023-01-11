@@ -1,6 +1,13 @@
 <?php
+    /**
+     *
+     */
     namespace IoJaegers\Lighthouse\Router;
 
+
+    /**
+     *
+     */
     class Engine
     {
         function __construct()
@@ -14,7 +21,7 @@
         }
 
 
-        function loadState(): void
+        function load(): void
         {
 
         }

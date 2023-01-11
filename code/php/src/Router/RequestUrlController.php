@@ -1,4 +1,7 @@
 <?php
+    /**
+     *
+     */
     namespace IoJaegers\Lighthouse\Router;
 
 
@@ -13,7 +16,10 @@
         {
             if( $this->isHTTPSet() )
             {
-
+                if( $_SERVER[ 'HTTPS' ] == 'off' )
+                {
+                    return true;
+                }
             }
 
             return false;
