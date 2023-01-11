@@ -14,12 +14,9 @@
 
         function isHTTP(): bool
         {
-            if( $this->isHTTPSet() )
+            if( !$this->isHTTPS() )
             {
-                if( $_SERVER[ 'HTTPS' ] == 'off' )
-                {
-                    return true;
-                }
+                return true;
             }
 
             return false;
@@ -27,7 +24,7 @@
 
         function isHTTPS(): bool
         {
-            if( $this->isHTTPSet() )
+            if( $this->isHttpsSet() )
             {
                 if( $_SERVER[ 'HTTPS' ] == 'on' )
                 {
@@ -38,7 +35,7 @@
             return false;
         }
 
-        private function isHTTPSet(): bool
+        private function isHttpsSet(): bool
         {
             return isset( $_SERVER[ 'HTTPS' ] );
         }
