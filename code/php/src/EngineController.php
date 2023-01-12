@@ -15,15 +15,32 @@
 
         }
 
+        public function setup()
+        {
+            Autoloader::SetupLoader();
+        }
 
         public function execute()
         {
-            Autoloader::SetupLoader();
-
             $engine = new Engine();
             $loader = new EngineLoader( $engine );
 
             $engine->load();
+        }
+
+        public function save()
+        {
+
+        }
+
+        public function load()
+        {
+
+        }
+
+        public function cleanup()
+        {
+
         }
     }
 ?>
