@@ -4,10 +4,13 @@
      */
     namespace IoJaegers\Lighthouse;
 
-    require_once 'Setup/Autoloader.php';
+    use IoJaegers\Lighthouse\Autoloaders\Autoloader;
+    use IoJaegers\Lighthouse\Router\Engine;
 
-    use IoJaegers\Lighthouse\Router\RequestUrlController;
+    Autoloader::SetupLoader();
 
-    $engine = new Router\Engine();
+    $engine = new Engine();
+    $loader = new EngineLoader( $engine );
+
     $engine->load();
 ?>

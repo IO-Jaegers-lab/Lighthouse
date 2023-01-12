@@ -6,12 +6,18 @@
       <sourceFolder url="file://$MODULE_DIR$/code/crons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Autoloaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Space" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Space/Actions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Space/Requests" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Space/Routes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Templates" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Singletons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Setup" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
