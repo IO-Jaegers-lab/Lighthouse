@@ -96,5 +96,23 @@
         {
             $this->engine = $engine;
         }
+
+        /**
+         * @param EngineController $engineController
+         * @return EngineView
+         */
+        public static function createView( EngineController $engineController ): EngineView
+        {
+            $interface = new EngineView( $engineController );
+            return $interface;
+        }
+
+        /**
+         * @return EngineView
+         */
+        public function instantiateView(): EngineView
+        {
+            return self::createView( $this );
+        }
     }
 ?>
