@@ -29,6 +29,8 @@
             $controller->load();
 
             $controller->execute();
+            $controller->cache();
+
             $controller->save();
 
             $controller->cleanup();
@@ -40,7 +42,7 @@
         /**
          * @return EngineController|null
          */
-        public function getEngine(): ?EngineController
+        public final function getEngine(): ?EngineController
         {
             return $this->engine;
         }
@@ -48,7 +50,7 @@
         /**
          * @param EngineController|null $engine
          */
-        public function setEngine( ?EngineController $engine ): void
+        public final function setEngine( ?EngineController $engine ): void
         {
             $this->engine = $engine;
         }

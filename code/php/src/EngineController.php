@@ -56,6 +56,14 @@
         /**
          * @return void
          */
+        public function cache(): void
+        {
+
+        }
+
+        /**
+         * @return void
+         */
         public function save(): void
         {
 

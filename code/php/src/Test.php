@@ -4,7 +4,10 @@
      */
     namespace IoJaegers\Lighthouse;
 
-    $controller = new EngineController();
-    $view = $controller->instantiateView();
-    $view->run();
+    print "Testing=====================================================================";
+
+    use IoJaegers\Lighthouse\Router\Controllers\RequestUrlController;
+
+    $requestController = new RequestUrlController();
+    $requestController->load();
 ?>

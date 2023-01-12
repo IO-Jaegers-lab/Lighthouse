@@ -4,10 +4,11 @@
      */
     namespace IoJaegers\Lighthouse\Router\Base;
 
+
     /**
      *
      */
-    class EngineQuery
+    class RouterEngineQuery
     {
         /**
          * @param String|null $query

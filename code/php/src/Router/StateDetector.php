@@ -13,7 +13,7 @@
     class StateDetector
     {
         /**
-         *
+         * @param StateInterface|null $state
          */
         public function __construct( ?StateInterface $state )
         {
@@ -28,13 +28,16 @@
 
         }
 
+        // Variables
+        private ?StateInterface $stateInterface = null;
+
         public const default = 0;
 
 
         /**
          * @return bool
          */
-        public final function default(): bool
+        public final function reset_state(): bool
         {
             return $this->detect( self::default );
         }
@@ -44,20 +47,26 @@
          * @param int $state
          * @return bool
          */
-        public function detect( int $state ): bool
+        public function detect_state( int $state ): bool
         {
             $this->getStateInterface()->setDetectState( $state );
             return $this->getStateInterface()->detect();
         }
 
-        // Variables
-        private ?StateInterface $stateInterface = null;
+        /**
+         * @return bool
+         */
+        public function selected_state(): bool
+        {
+            return $this->getStateInterface()->detect();
+        }
 
 
+        // Accessors
         /**
          * @return StateInterface|null
          */
-        public function getStateInterface(): ?StateInterface
+        public final function getStateInterface(): ?StateInterface
         {
             return $this->stateInterface;
         }
@@ -66,7 +75,7 @@
          * @param StateInterface $stateInterface
          * @return void
          */
-        public function setStateInterface( StateInterface $stateInterface ): void
+        public final function setStateInterface( StateInterface $stateInterface ): void
         {
             $this->stateInterface = $stateInterface;
         }
