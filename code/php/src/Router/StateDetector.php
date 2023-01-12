@@ -12,16 +12,28 @@
      */
     class StateDetector
     {
+        /**
+         *
+         */
         public function __construct()
         {
 
         }
 
+
+        /**
+         * @return bool
+         */
         public function default(): bool
         {
             return false;
         }
 
+
+        /**
+         * @param int $state
+         * @return bool
+         */
         public function detect( int $state ): bool
         {
             return true;

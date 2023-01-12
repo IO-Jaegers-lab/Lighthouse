@@ -12,6 +12,9 @@
     class PHPState
         extends StateObject
     {
+        /**
+         * @return bool
+         */
         public function detect(): bool
         {
             return false;

@@ -12,11 +12,17 @@
     class HttpState
         extends StateObject
     {
+        /**
+         *
+         */
         public function __construct()
         {
 
         }
 
+        /**
+         * @return bool
+         */
         public function detect(): bool
         {
             switch( $this->getDetectState() )

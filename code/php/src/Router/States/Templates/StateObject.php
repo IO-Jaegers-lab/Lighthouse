@@ -10,6 +10,9 @@
     abstract class StateObject
         implements StateInterface
     {
+        /**
+         *
+         */
         public function __construct()
         {
 

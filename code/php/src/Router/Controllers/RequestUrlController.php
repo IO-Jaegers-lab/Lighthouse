@@ -10,6 +10,9 @@
      */
     class RequestUrlController
     {
+        /**
+         *
+         */
         function __construct()
         {
 

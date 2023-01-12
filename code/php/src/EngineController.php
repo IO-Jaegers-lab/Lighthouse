@@ -8,39 +8,92 @@
     use IoJaegers\Lighthouse\Router\Engine;
 
 
+    /**
+     *
+     */
     class EngineController
     {
+        /**
+         *
+         */
         function __construct()
         {
 
         }
 
-        public function setup()
+        /**
+         * @return void
+         */
+        function __deconstruct(): void
+        {
+
+        }
+
+
+        // Variables
+        private ?Engine $engine = null;
+
+
+        // Code Structure
+        /**
+         * @return void
+         */
+        public function setup(): void
         {
             Autoloader::SetupLoader();
+            $this->engine->requirements();
         }
 
-        public function execute()
-        {
-            $engine = new Engine();
-            $loader = new EngineLoader( $engine );
-
-            $engine->load();
-        }
-
-        public function save()
+        /**
+         * @return void
+         */
+        public function execute(): void
         {
 
         }
 
-        public function load()
+        /**
+         * @return void
+         */
+        public function save(): void
         {
 
         }
 
-        public function cleanup()
+        /**
+         * @return void
+         */
+        public function load(): void
+        {
+            $loader = new EngineLoader( $this->engine );
+            $loader->load();
+        }
+
+        /**
+         * @return void
+         *
+         */
+        public function cleanup(): void
         {
 
+        }
+
+        
+        // Accessors
+        /**
+         * @return Engine|null
+         */
+        public final function getEngine(): ?Engine
+        {
+            return $this->engine;
+        }
+
+        /**
+         * @param Engine|null $engine
+         */
+        public final function setEngine( ?Engine $engine ): void
+        {
+            $this->engine = $engine;
         }
     }
 ?>

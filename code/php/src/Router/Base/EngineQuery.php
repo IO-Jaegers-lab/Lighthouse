@@ -7,8 +7,11 @@
     /**
      *
      */
-    class EnginePath
+    class EngineQuery
     {
+        /**
+         * @param String|null $query
+         */
         function __construct( ?String $query )
         {
             $this->setQuery( $query );
@@ -17,12 +20,20 @@
         // Variables
         private $query = null;
 
-        public function getQuery(): ?String
+        // Accessors
+        /**
+         * @return String|null
+         */
+        public final function getQuery(): ?String
         {
             return $this->query;
         }
 
-        public function setQuery( String $query )
+        /**
+         * @param String $query
+         * @return void
+         */
+        public final function setQuery( String $query )
         {
             $this->query = $query;
         }

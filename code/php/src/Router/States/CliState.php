@@ -13,11 +13,17 @@
     class CliState
         extends StateObject
     {
+        /**
+         *
+         */
         public function __construct()
         {
 
         }
 
+        /**
+         * @return bool
+         */
         public function detect(): bool
         {
             switch( $this->getDetectState() )
@@ -31,6 +37,9 @@
 
         const UsingCliInterface = 0;
 
+        /**
+         * @return bool
+         */
         public static function isCli(): bool
         {
             if( !php_sapi_name() )

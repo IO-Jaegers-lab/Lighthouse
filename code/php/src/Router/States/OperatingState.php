@@ -14,6 +14,9 @@
     class OperatingState
         extends StateObject
     {
+        /**
+         * @return bool
+         */
         public function detect(): bool
         {
             return false;
