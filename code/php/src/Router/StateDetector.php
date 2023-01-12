@@ -4,7 +4,8 @@
      */
     namespace IoJaegers\Lighthouse\Router;
 
-    use IoJaegers\Lighthouse\Router\States\StateInterface;
+    use IoJaegers\Lighthouse\Router\States\Templates\Interfaces\StateInterface;
+
 
     /**
      *

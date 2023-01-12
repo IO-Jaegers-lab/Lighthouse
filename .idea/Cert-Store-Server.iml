@@ -14,10 +14,13 @@
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Space/Routes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Domain/Templates" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Base" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/Singletons" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States/Templates" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States/Templates/Interfaces" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
