@@ -15,18 +15,28 @@
         /**
          *
          */
-        public function __construct()
+        public function __construct( ?StateInterface $state )
+        {
+            $this->setStateInterface( $state );
+        }
+
+        /**
+         * @return void
+         */
+        public function __deconstruct(): void
         {
 
         }
+
+        public const default = 0;
 
 
         /**
          * @return bool
          */
-        public function default(): bool
+        public final function default(): bool
         {
-            return false;
+            return $this->detect( self::default );
         }
 
 
@@ -36,11 +46,12 @@
          */
         public function detect( int $state ): bool
         {
-            return true;
+            $this->getStateInterface()->setDetectState( $state );
+            return $this->getStateInterface()->detect();
         }
 
         // Variables
-        private $stateInterface = null;
+        private ?StateInterface $stateInterface = null;
 
 
         /**

@@ -35,7 +35,7 @@
             return false;
         }
 
-        const UsingCliInterface = 0;
+        public const UsingCliInterface = 0;
 
         /**
          * @return bool

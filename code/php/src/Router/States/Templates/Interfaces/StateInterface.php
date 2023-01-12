@@ -15,6 +15,12 @@
          */
         public function detect(): bool;
 
+
+        /**
+         * @param int|null $detect_state
+         * @return mixed
+         */
+        public function setDetectState(?int $detect_state);
     }
 ?>
 

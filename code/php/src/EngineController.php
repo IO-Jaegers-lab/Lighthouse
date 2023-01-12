@@ -18,7 +18,9 @@
          */
         function __construct()
         {
-
+            $this->setEngine(
+                new Engine()
+            );
         }
 
         /**
@@ -40,7 +42,6 @@
          */
         public function setup(): void
         {
-            Autoloader::SetupLoader();
             $this->engine->requirements();
         }
 
@@ -78,7 +79,7 @@
 
         }
 
-        
+
         // Accessors
         /**
          * @return Engine|null
