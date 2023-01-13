@@ -39,7 +39,8 @@
          */
         public final function reset_state(): bool
         {
-            return $this->detect( self::default );
+            $this->getStateInterface()->setDetectState(self::default);
+            return $this->getStateInterface()->detect();
         }
 
 

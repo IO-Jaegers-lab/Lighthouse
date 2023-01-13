@@ -7,9 +7,9 @@
     print "Testing=====================================================================";
     echo "</br>";
 
-    use IoJaegers\Lighthouse\Router\Controllers\RequestUrlController;
+    use IoJaegers\Lighthouse\Router\Controllers\RequestUrlFactory;
 
-    $requestController = new RequestUrlController();
+    $requestController = new RequestUrlFactory();
     $requestController->load();
 ?>
 
@@ -18,8 +18,3 @@
         $requestController->debug();
     ?>
 </pre>
-
-<?php
-echo "a:" . $_SERVER['REQUEST_URI']
-
-?>

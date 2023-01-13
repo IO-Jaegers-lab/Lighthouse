@@ -5,14 +5,18 @@
     namespace IoJaegers\Lighthouse\Router\Controllers;
 
     use IoJaegers\Lighthouse\Router\Base\RouterEngineDomain;
-use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
-    use IoJaegers\Lighthouse\Router\Base\UniformResourceLocator;
+    use IoJaegers\Lighthouse\Router\Base\RouterEngineProtocol;
+    use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
+    use IoJaegers\Lighthouse\Router\Base\RequestUniformResourceLocator;
+
+    use IoJaegers\Lighthouse\Router\StateDetector;
+    use IoJaegers\Lighthouse\Router\States\HttpState;
 
 
-    /**
+/**
      *
      */
-    class RequestUrlController
+    class RequestUrlFactory
     {
         // Constructor
         /**
@@ -21,11 +25,11 @@ use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
         public function __construct()
         {
             $this->setUrl(
-                new UniformResourceLocator( null, null ) );
+                new RequestUniformResourceLocator( null, null ) );
         }
 
         // Variables
-        private UniformResourceLocator|null $url = null;
+        private RequestUniformResourceLocator|null $url = null;
 
         private bool $is_url_case_sensitive = true;
 
@@ -58,9 +62,27 @@ use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
          */
         protected function loadProtocol(): void
         {
-            $protocol = self::queueProtocol();
+            $httpState = new StateDetector( new HttpState() );
 
+            // 0 Web CGI
+            if( $httpState->selected_state() )
+            {
+                if( $httpState->detect_state( HttpState::UsingHttps ) )
+                {
+                    $this->getUrl()->setProtocol( RouterEngineProtocol::HTTPS );
+                    return;
+                }
 
+                if( $httpState->detect_state( HttpState::UsingHttp ) )
+                {
+                    $this->getUrl()->setProtocol( RouterEngineProtocol::HTTP );
+                    return;
+                }
+            }
+            else
+            {
+                print( "Error" );
+            }
         }
 
         /**
@@ -89,17 +111,17 @@ use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
 
         // Accessor
         /**
-         * @return UniformResourceLocator|null
+         * @return RequestUniformResourceLocator|null
          */
-        public final function getUrl(): ?UniformResourceLocator
+        public final function getUrl(): ?RequestUniformResourceLocator
         {
             return $this->url;
         }
 
         /**
-         * @param UniformResourceLocator|null $url
+         * @param RequestUniformResourceLocator|null $url
          */
-        public final function setUrl( ?UniformResourceLocator $url ): void
+        public final function setUrl( ?RequestUniformResourceLocator $url ): void
         {
             $this->url = $url;
         }
@@ -132,11 +154,6 @@ use IoJaegers\Lighthouse\Router\Base\RouterEngineQuery;
         public static function queueInterface(): ?string
         {
             return $_SERVER[ 'GATEWAY_INTERFACE' ];
-        }
-
-        public static function queueProtocol(): ?string
-        {
-            return $_SERVER[ 'SERVER_PROTOCOL' ];
         }
 
         public static function queueHostname(): ?string

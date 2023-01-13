@@ -4,7 +4,7 @@
      */
     namespace IoJaegers\Lighthouse\Router\Singletons;
 
-    use IoJaegers\Lighthouse\Router\Controllers\RequestUrlController;
+    use IoJaegers\Lighthouse\Router\Controllers\RequestUrlFactory;
 
 
     /**
@@ -23,23 +23,23 @@
         private static $singleton = null;
 
         /**
-         * @return RequestUrlController
+         * @return RequestUrlFactory
          */
-        public static function getSingleton(): RequestUrlController
+        public static function getSingleton(): RequestUrlFactory
         {
             if( self::isSingletonNull() )
             {
-                self::setSingleton( new RequestUrlController() );
+                self::setSingleton( new RequestUrlFactory() );
             }
 
             return self::$singleton;
         }
 
         /**
-         * @param RequestUrlController $singleton
+         * @param RequestUrlFactory $singleton
          * @return void
          */
-        public static function setSingleton( RequestUrlController $singleton ): void
+        public static function setSingleton(RequestUrlFactory $singleton ): void
         {
             self::$singleton = $singleton;
         }

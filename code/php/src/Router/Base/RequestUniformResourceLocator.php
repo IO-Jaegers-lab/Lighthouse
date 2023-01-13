@@ -8,7 +8,7 @@
     /**
      *
      */
-    class UniformResourceLocator
+    class RequestUniformResourceLocator
     {
         function __construct( ?RouterEngineDomain $domain,
                               ?RouterEngineQuery $query )
