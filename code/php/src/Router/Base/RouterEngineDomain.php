@@ -11,14 +11,11 @@
     {
         public function __construct()
         {
-            $this->setProtocol( RouterEngineProtocol::Unknown );
+
         }
 
         // Variables
-        private RouterEngineProtocol $protocol;
-
         private ?string $host = null;
-
 
         // Accessors
         /**
@@ -38,22 +35,12 @@
         }
 
         /**
-         * @return RouterEngineProtocol
+         * @return string|null
          */
-        public function getProtocol(): RouterEngineProtocol
+        public final function toString(): ?string
         {
-            return $this->protocol;
+            return null;
         }
-
-        /**
-         * @param RouterEngineProtocol $protocol
-         * @return void
-         */
-        public function setProtocol( RouterEngineProtocol $protocol ): void
-        {
-            $this->protocol = $protocol;
-        }
-
     }
 ?>
 

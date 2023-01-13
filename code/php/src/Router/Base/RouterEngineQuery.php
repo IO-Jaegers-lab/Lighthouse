@@ -38,6 +38,15 @@
         {
             $this->query = $query;
         }
+
+
+        /**
+         * @return string|null
+         */
+        public final function toString(): ?string
+        {
+            return null;
+        }
     }
 ?>
 
