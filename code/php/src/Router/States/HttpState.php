@@ -74,12 +74,18 @@
 
         const UsingHttps = 2;
 
+
+        /**
+         * @return string|null
+         */
         public static function getServerProtocol(): ?string
         {
             return $_SERVER[ 'SERVER_PROTOCOL' ];
         }
 
-
+        /**
+         * @return bool
+         */
         public static function getIsHttp(): bool
         {
             if( isset( $_SERVER[ 'SERVER_PROTOCOL' ] ) )
@@ -97,6 +103,9 @@
             return false;
         }
 
+        /**
+         * @return bool
+         */
         public static function getIsHttps(): bool
         {
             if( isset( $_SERVER[ 'HTTPS' ] ) )
