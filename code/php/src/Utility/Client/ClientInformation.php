@@ -1,6 +1,5 @@
 <?php
     namespace IoJaegers\Lighthouse\Utility\Client;
-
 	
     class ClientInformation
     {
@@ -57,6 +56,10 @@
 		private $client_ip = null;
 		
 		private static $singleton_client_ip_addr = null;
+		
+		private const key_http_client_ip = 'HTTP_CLIENT_IP';
+		private const key_http_x_forwarded_for = 'HTTP_X_FORWARDED_FOR';
+		private const key_remote_addr = 'REMOTE_ADDR';
 	
 		//
 		/**
@@ -78,9 +81,9 @@
 		public function debug(): array
 		{
 			$values = array(
-				'HTTP_CLIENT_IP' => self::call_http_client_ip(),
-				'HTTP_X_FORWARDED_FOR' => self::call_http_x_forwarded_for(),
-				'REMOTE_ADDR' => self::call_remote_addr()
+				self::key_http_client_ip => self::call_http_client_ip(),
+				self::key_http_x_forwarded_for => self::call_http_x_forwarded_for(),
+				self::key_remote_addr => self::call_remote_addr()
 			);
 			
 			return $values;
@@ -88,7 +91,7 @@
 		
 		protected function call_http_client_ip()
 		{
-			$http_client_ip = $_SERVER[ 'HTTP_CLIENT_IP' ];
+			$http_client_ip = $_SERVER[ self::key_http_client_ip ];
 			
 			if( isset( $http_client_ip ) )
 			{
@@ -100,7 +103,7 @@
 		
 		protected function call_http_x_forwarded_for()
 		{
-			$http_client_ip = $_SERVER[ 'HTTP_X_FORWARDED_FOR' ];
+			$http_client_ip = $_SERVER[ self::key_http_x_forwarded_for ];
 			
 			if( isset( $http_client_ip ) )
 			{
@@ -112,7 +115,7 @@
 		
 		protected function call_remote_addr()
 		{
-			$remote_addr = $_SERVER['REMOTE_ADDR'];
+			$remote_addr = $_SERVER[ self::key_remote_addr ];
 			
 			if( isset( $remote_addr ) )
 			{
