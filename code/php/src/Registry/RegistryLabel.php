@@ -1,8 +1,8 @@
 <?php
-/**
+    /**
  *
  */
-namespace IoJaegers\Lighthouse\Router;
+    namespace IoJaegers\Lighthouse\Registry;
 
 
     /**

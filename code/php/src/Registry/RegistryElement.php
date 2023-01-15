@@ -2,7 +2,7 @@
     /**
  *
      */
-    namespace IoJaegers\Lighthouse\Router;
+    namespace IoJaegers\Lighthouse\Registry;
 
 
     /**
@@ -24,6 +24,7 @@
         private RegistryLabel|null $label = null;
 
         private RegistryKey|null $key = null;
+
 
         // Accessors
         /**

@@ -21,7 +21,13 @@
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States/Templates" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Router/States/Templates/Interfaces" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/.cache" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/.cache/.registry" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/code/php/src/Registry" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Registry/Drivers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Utility" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Utility/Client" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/code/php/src/Utility/Files" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
