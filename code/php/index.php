@@ -1,4 +1,5 @@
 <?php
-    require 'vendor/autoload.php';
-    require 'src/Controller.php';
+    // include autoloader
+    require_once 'vendor/autoload.php';
+    require_once 'src/http.php'
 ?>

@@ -5,7 +5,9 @@
     namespace IoJaegers\Lighthouse\Router;
 
 
-    /**
+    use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+
+/**
      *
      */
     class Engine
@@ -20,9 +22,11 @@
 
         }
 
-
-        function load(): void
+        function requirements(): void
         {
+            SessionMaintenance::Setup();
+
+
 
         }
     }
