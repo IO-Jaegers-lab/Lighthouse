@@ -54,7 +54,7 @@
          */
         public static function Setup(): void
         {
-            if( !self::getIsStarted() )
+            if( !self::isStarted() )
             {
                 self::setIsStarted( true );
                 session_start();
