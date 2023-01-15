@@ -12,6 +12,7 @@
      */
     class EngineLoader
     {
+        // Constructors
         /**
          * @param Engine $engine
          */
@@ -20,6 +21,7 @@
             $this->setEngine( $engine );
         }
 
+        //
         /**
          * @return void
          */
@@ -31,6 +33,7 @@
         // Variables
         private ?Engine $engine = null;
 
+        // Accessor
         /**
          * @return Engine|null
          */
@@ -48,6 +51,5 @@
             $this->engine = $engine;
         }
     }
-
 ?>
 

@@ -74,8 +74,7 @@
          */
         public function load(): void
         {
-            $loader = new EngineLoader( $this->engine );
-            $loader->load();
+            $this->instantiateLoader()->load();
         }
 
         /**
@@ -107,20 +106,36 @@
 
         /**
          * @param EngineController $engineController
-         * @return EngineView
+         * @return EngineProcess
          */
-        public static function createView( EngineController $engineController ): EngineView
+        public static function createProcess( EngineController $engineController ): EngineProcess
         {
-            $interface = new EngineView( $engineController );
+            $interface = new EngineProcess( $engineController );
             return $interface;
         }
 
-        /**
-         * @return EngineView
-         */
-        public function instantiateView(): EngineView
+        public static function createLoader( EngineController $controller ): EngineLoader
         {
-            return self::createView( $this );
+            $loader = new EngineLoader( $controller );
+            return $loader;
+        }
+
+
+
+        /**
+         * @return EngineProcess
+         */
+        public function instantiateProcess(): EngineProcess
+        {
+            return self::createProcess( $this );
+        }
+
+        /**
+         * @return EngineLoader
+         */
+        public function instantiateLoader(): EngineLoader
+        {
+            return self::instantiateLoader( $this );
         }
     }
 ?>

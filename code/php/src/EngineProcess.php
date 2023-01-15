@@ -7,8 +7,9 @@
     /**
      *
      */
-    class EngineView
+    class EngineProcess
     {
+        // Constructors
         /**
          * @param EngineController|null $engine
          */
@@ -25,20 +26,20 @@
         {
             $controller = $this->getEngine();
 
-            $controller->setup();
             $controller->load();
+            $controller->setup();
 
             $controller->execute();
             $controller->cache();
 
             $controller->save();
-
             $controller->cleanup();
         }
 
         // Variables
         private ?EngineController $engine = null;
 
+        // Variables
         /**
          * @return EngineController|null
          */
