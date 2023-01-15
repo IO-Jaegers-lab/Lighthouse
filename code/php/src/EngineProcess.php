@@ -15,7 +15,7 @@
          */
         public function __construct( ?EngineController $engine )
         {
-            $this->setEngine( $engine );
+            $this->setEngineController( $engine );
         }
 
 
@@ -24,7 +24,7 @@
          */
         public function run()
         {
-            $controller = $this->getEngine();
+            $controller = $this->getEngineController();
 
             $controller->load();
             $controller->setup();
@@ -37,23 +37,23 @@
         }
 
         // Variables
-        private ?EngineController $engine = null;
+        private ?EngineController $controller = null;
 
         // Variables
         /**
          * @return EngineController|null
          */
-        public final function getEngine(): ?EngineController
+        public final function getEngineController(): ?EngineController
         {
-            return $this->engine;
+            return $this->controller;
         }
 
         /**
-         * @param EngineController|null $engine
+         * @param EngineController|null $controller
          */
-        public final function setEngine( ?EngineController $engine ): void
+        public final function setEngineController( ?EngineController $controller ): void
         {
-            $this->engine = $engine;
+            $this->controller = $controller;
         }
     }
 ?>

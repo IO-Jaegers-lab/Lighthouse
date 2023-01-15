@@ -37,6 +37,12 @@
 
 
         // Code Structure
+        public function startup(): void
+        {
+            $process = $this->instantiateProcess();
+            $process->run();
+        }
+        
         /**
          * @return void
          */
@@ -74,7 +80,7 @@
          */
         public function load(): void
         {
-            $this->instantiateLoader()->load();
+        
         }
 
         /**
@@ -113,14 +119,17 @@
             $interface = new EngineProcess( $engineController );
             return $interface;
         }
-
+    
+        
+        /**
+         * @param EngineController $controller
+         * @return EngineLoader
+         */
         public static function createLoader( EngineController $controller ): EngineLoader
         {
             $loader = new EngineLoader( $controller );
             return $loader;
         }
-
-
 
         /**
          * @return EngineProcess
@@ -135,7 +144,7 @@
          */
         public function instantiateLoader(): EngineLoader
         {
-            return self::instantiateLoader( $this );
+            return self::createLoader( $this );
         }
     }
 ?>

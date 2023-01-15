@@ -4,9 +4,6 @@
      */
     namespace IoJaegers\Lighthouse;
 
-    use IoJaegers\Lighthouse\Router\Engine;
-
-
     /**
      *
      */
@@ -14,11 +11,11 @@
     {
         // Constructors
         /**
-         * @param Engine $engine
+         * @param EngineController $engine
          */
-        public function __construct( Engine $engine )
+        public function __construct( EngineController $engine )
         {
-            $this->setEngine( $engine );
+            $this->setEngineController( $engine );
         }
 
         //
@@ -27,28 +24,30 @@
          */
         public function load(): void
         {
-
+            $loader = $this->getEngineController()->instantiateLoader();
+            $loader->load();
         }
 
         // Variables
-        private ?Engine $engine = null;
+        private ?EngineController $engineController = null;
 
+        
         // Accessor
         /**
-         * @return Engine|null
+         * @return EngineController|null
          */
-        public final function getEngine(): ?Engine
+        public final function getEngineController(): ?EngineController
         {
-            return $this->engine;
+            return $this->engineController;
         }
-
+    
         /**
-         * @param Engine|null $engine
+         * @param EngineController|null $engineController
          * @return void
          */
-        public final function setEngine( ?Engine $engine ): void
+        public final function setEngineController( ?EngineController $engineController ): void
         {
-            $this->engine = $engine;
+            $this->engineController = $engineController;
         }
     }
 ?>
