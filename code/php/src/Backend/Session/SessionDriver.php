@@ -10,6 +10,13 @@
      */
     class SessionDriver
     {
+        public function __construct()
+        {
+            if( SessionState::isDisabled() )
+            {
+                throw new \ErrorException('Sessions are disabled.');
+            }
+        }
 
     }
 ?>
