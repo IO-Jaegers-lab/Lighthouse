@@ -5,7 +5,8 @@
     namespace IoJaegers\Lighthouse;
 
     use IoJaegers\Lighthouse\Autoloaders\Autoloader;
-    use IoJaegers\Lighthouse\Router\Engine;
+use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+use IoJaegers\Lighthouse\Router\Engine;
 
 
     /**
@@ -72,7 +73,7 @@
          */
         public function save(): void
         {
-
+            SessionMaintenance::Close();
         }
 
         /**

@@ -2,7 +2,23 @@
 	namespace IoJaegers\Lighthouse;
 	
 	// Start the process
-	$engineController = new EngineController();
-	$engineController->startup();
+use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+
+	//$engineController = new EngineController();
+	//$engineController->startup();
 ?>
+
+<pre>
+	<?php
+	print_r(session_id());
+	if(SessionMaintenance::isStarted())
+	{
+		echo "true";
+	}
+	else
+	{
+		echo "false";
+	}
+	?>
+</pre>
 
