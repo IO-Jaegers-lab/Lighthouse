@@ -26,7 +26,7 @@
          */
         public function load(): void
         {
-            $this->isEngineControllerInstantiated();
+            $this->validateEngineControllerIsInstantiated();
             $loader = $this->getEngineController()->instantiateLoader();
             $loader->load();
         }
@@ -35,7 +35,7 @@
          * @return void
          * @throws \ErrorException
          */
-        public function isEngineControllerInstantiated(): void
+        public function validateEngineControllerIsInstantiated(): void
         {
             if( $this->isEngineControllerNull() )
             {

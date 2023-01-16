@@ -44,7 +44,7 @@
          */
         public function startup(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
             $process = $this->instantiateProcess();
             $process->run();
         }
@@ -54,7 +54,7 @@
          */
         public function setup(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
             $this->engine->requirements();
             
             $setup = new SetupExtensionController();
@@ -66,7 +66,7 @@
          */
         public function execute(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
         }
 
         /**
@@ -74,7 +74,7 @@
          */
         public function cache(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
             
         }
 
@@ -83,7 +83,7 @@
          */
         public function save(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
             SessionMaintenance::Close();
         }
 
@@ -92,7 +92,7 @@
          */
         public function load(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
         }
 
         /**
@@ -101,7 +101,7 @@
          */
         public function cleanup(): void
         {
-            $this->isEngineInstantiated();
+            $this->validateEngineIsInstantiated();
 
         }
 
@@ -109,7 +109,7 @@
         /**
          * @return void
          */
-        public function isEngineInstantiated(): void
+        public function validateEngineIsInstantiated(): void
         {
             if( $this->isEngineNull() )
             {
