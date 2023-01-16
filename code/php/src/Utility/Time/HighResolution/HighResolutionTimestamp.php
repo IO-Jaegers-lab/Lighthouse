@@ -4,6 +4,8 @@
 	 */
 	namespace IoJaegers\Lighthouse\Utility\Time\HighResolution;
 	
+	use IoJaegers\Lighthouse\Utility\Time\BaseTimestamp;
+	
 	/**
 	 *
 	 */
@@ -23,7 +25,7 @@
 		 */
 		public function now(): int
 		{
-			// TODO: Implement now() method.
+			
 			return -1;
 		}
 	}

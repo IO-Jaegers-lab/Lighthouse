@@ -1,4 +1,7 @@
 <?php
+	/**
+	 *
+	 */
 	namespace IoJaegers\Lighthouse\Utility\Time\Timestamp;
 	
 	use IoJaegers\Lighthouse\Utility\Time\BaseTimestamp;

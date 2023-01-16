@@ -4,6 +4,8 @@
 	 */
 	namespace IoJaegers\Lighthouse\Utility\Time\Precise;
 	
+	use IoJaegers\Lighthouse\Utility\Time\BaseTimestamp;
+	
 	/**
 	 *
 	 */
