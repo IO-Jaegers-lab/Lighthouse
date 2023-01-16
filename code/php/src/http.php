@@ -1,8 +1,12 @@
 <?php
+	/**
+	 *
+	 */
 	namespace IoJaegers\Lighthouse;
 	
 	// Start the process
-	$engineController = new EngineController();
+    use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+    
+    $engineController = new EngineController();
 	$engineController->startup();
 ?>
-

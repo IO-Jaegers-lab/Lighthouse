@@ -1,8 +1,17 @@
 <?php
+	/**
+	 *
+	 */
     namespace IoJaegers\Lighthouse\Utility\Files;
 
+	/**
+	 *
+	 */
     class Paths
     {
+		/**
+		 *
+		 */
         public function __construct()
         {
 

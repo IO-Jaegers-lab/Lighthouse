@@ -5,6 +5,8 @@
     namespace IoJaegers\Lighthouse;
 
     use IoJaegers\Lighthouse\Autoloaders\Autoloader;
+    use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+    use IoJaegers\Lighthouse\Backend\Setup\SetupExtensionController;
     use IoJaegers\Lighthouse\Router\Engine;
 
 
@@ -37,6 +39,9 @@
 
 
         // Code Structure
+        /**
+         * @return void
+         */
         public function startup(): void
         {
             $process = $this->instantiateProcess();
@@ -49,6 +54,9 @@
         public function setup(): void
         {
             $this->engine->requirements();
+            
+            $setup = new SetupExtensionController();
+            $setup->execute();
         }
 
         /**
@@ -72,7 +80,7 @@
          */
         public function save(): void
         {
-
+            SessionMaintenance::Close();
         }
 
         /**

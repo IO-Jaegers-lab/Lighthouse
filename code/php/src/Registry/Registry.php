@@ -10,11 +10,17 @@
      */
     class Registry
     {
+        /**
+         *
+         */
         function __construct()
         {
 
         }
-
+    
+        /**
+         * @return void
+         */
         function __deconstruct(): void
         {
 
