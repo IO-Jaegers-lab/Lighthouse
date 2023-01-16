@@ -7,6 +7,7 @@
     use IoJaegers\Lighthouse\Autoloaders\Autoloader;
     use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
     use IoJaegers\Lighthouse\Backend\Setup\SetupExtensionController;
+    
     use IoJaegers\Lighthouse\Router\Engine;
 
 
@@ -32,18 +33,18 @@
         {
 
         }
-
-
+        
         // Variables
         private ?Engine $engine = null;
-
-
+        
+        
         // Code Structure
         /**
          * @return void
          */
         public function startup(): void
         {
+            $this->isEngineInstantiated();
             $process = $this->instantiateProcess();
             $process->run();
         }
@@ -53,6 +54,7 @@
          */
         public function setup(): void
         {
+            $this->isEngineInstantiated();
             $this->engine->requirements();
             
             $setup = new SetupExtensionController();
@@ -64,7 +66,7 @@
          */
         public function execute(): void
         {
-
+            $this->isEngineInstantiated();
         }
 
         /**
@@ -72,7 +74,8 @@
          */
         public function cache(): void
         {
-
+            $this->isEngineInstantiated();
+            
         }
 
         /**
@@ -80,6 +83,7 @@
          */
         public function save(): void
         {
+            $this->isEngineInstantiated();
             SessionMaintenance::Close();
         }
 
@@ -88,7 +92,7 @@
          */
         public function load(): void
         {
-        
+            $this->isEngineInstantiated();
         }
 
         /**
@@ -97,9 +101,21 @@
          */
         public function cleanup(): void
         {
+            $this->isEngineInstantiated();
 
         }
 
+        // Errors
+        /**
+         * @return void
+         */
+        public function isEngineInstantiated(): void
+        {
+            if( $this->isEngineNull() )
+            {
+                throw new \Error();
+            }
+        }
 
         // Accessors
         /**
@@ -117,6 +133,14 @@
         {
             $this->engine = $engine;
         }
+    
+        /**
+         * @return bool
+         */
+        public final function isEngineNull(): bool
+        {
+            return !isset( $this->engine );
+        }
 
         /**
          * @param EngineController $engineController
@@ -127,7 +151,6 @@
             $interface = new EngineProcess( $engineController );
             return $interface;
         }
-    
         
         /**
          * @param EngineController $controller
