@@ -1,8 +1,10 @@
 <?php
-	namespace IoJaegers\Lighthouse\Utility\Time;
+	namespace IoJaegers\Lighthouse\Utility\Time\Timestamp;
+	
+	use IoJaegers\Lighthouse\Utility\Time\BaseTimestamp;
 	
 	
-	class PreciseTimestamp
+	class Timestamp
 		extends BaseTimestamp
 	{
 		public function __construct()

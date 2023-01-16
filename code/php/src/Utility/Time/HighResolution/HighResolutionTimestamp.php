@@ -1,8 +1,8 @@
 <?php
-	namespace IoJaegers\Lighthouse\Utility\Time;
+	namespace IoJaegers\Lighthouse\Utility\Time\HighResolution;
 	
 	
-	class Timestamp
+	class HighResolutionTimestamp
 		extends BaseTimestamp
 	{
 		public function __construct()

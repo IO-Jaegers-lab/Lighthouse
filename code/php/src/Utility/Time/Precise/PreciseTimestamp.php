@@ -1,8 +1,8 @@
 <?php
-	namespace IoJaegers\Lighthouse\Utility\Time;
+	namespace IoJaegers\Lighthouse\Utility\Time\Precise;
 	
 	
-	class HighResolutionTimestamp
+	class PreciseTimestamp
 		extends BaseTimestamp
 	{
 		public function __construct()
