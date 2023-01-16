@@ -5,8 +5,9 @@
     namespace IoJaegers\Lighthouse;
 
     use IoJaegers\Lighthouse\Autoloaders\Autoloader;
-use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
-use IoJaegers\Lighthouse\Router\Engine;
+    use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
+    use IoJaegers\Lighthouse\Backend\SetupExtensionController;
+    use IoJaegers\Lighthouse\Router\Engine;
 
 
     /**
@@ -38,6 +39,9 @@ use IoJaegers\Lighthouse\Router\Engine;
 
 
         // Code Structure
+        /**
+         * @return void
+         */
         public function startup(): void
         {
             $process = $this->instantiateProcess();
@@ -50,6 +54,9 @@ use IoJaegers\Lighthouse\Router\Engine;
         public function setup(): void
         {
             $this->engine->requirements();
+            
+            $setup = new SetupExtensionController();
+            $setup->execute();
         }
 
         /**

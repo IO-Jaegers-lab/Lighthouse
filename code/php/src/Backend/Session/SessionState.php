@@ -3,9 +3,11 @@
  *
 	 */
 	namespace IoJaegers\Lighthouse\Backend\Session;
+
 	
-	
-	
+	/**
+	 *
+	 */
 	final class SessionState
 	{
 		/**
@@ -32,6 +34,9 @@
 			return session_status() == PHP_SESSION_NONE;
 		}
 		
+		/**
+		 * @return bool
+		 */
 		public static function isAllowed(): bool
 		{
 			return self::isUsed() || self::isActive();

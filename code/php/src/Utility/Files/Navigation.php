@@ -1,8 +1,17 @@
 <?php
+	/**
+	 *
+	 */
     namespace IoJaegers\Lighthouse\Utility\Files;
 
+	/**
+	 *
+	 */
     class Navigation
     {
+		/**
+		 *
+		 */
         public function __construct()
         {
 

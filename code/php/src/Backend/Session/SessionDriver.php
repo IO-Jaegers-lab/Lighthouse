@@ -10,6 +10,9 @@
      */
     class SessionDriver
     {
+        /**
+         * @throws \ErrorException
+         */
         public function __construct()
         {
             if( SessionState::isDisabled() )

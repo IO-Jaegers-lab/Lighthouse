@@ -10,6 +10,10 @@
      */
     class RequestUniformResourceLocator
     {
+        /**
+         * @param RouterEngineDomain|null $domain
+         * @param RouterEngineQuery|null $query
+         */
         function __construct( ?RouterEngineDomain $domain,
                               ?RouterEngineQuery $query )
         {

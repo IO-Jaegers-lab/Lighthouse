@@ -9,6 +9,9 @@
      */
     class RouterEngineDomain
     {
+        /**
+         *
+         */
         public function __construct()
         {
 

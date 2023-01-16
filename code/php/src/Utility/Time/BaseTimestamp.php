@@ -1,16 +1,18 @@
 <?php
+	/**
+	 *
+	 */
 	namespace IoJaegers\Lighthouse\Utility\Time;
 	
-	
+	/**
+	 *
+	 */
 	abstract class BaseTimestamp
 	{
 		/**
 		 * @return int
 		 */
 		public abstract function now(): int;
-		
-		
-		
 		
 		// Variables
 		private ?int $value = null;

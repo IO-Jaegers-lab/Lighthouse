@@ -20,7 +20,7 @@
 
         }
 
-        private static $singleton = null;
+        private static ?RequestUrlFactory $singleton = null;
 
         /**
          * @return RequestUrlFactory

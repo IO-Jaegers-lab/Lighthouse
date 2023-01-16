@@ -10,11 +10,17 @@
      */
     class RegistryLabel
     {
+        /**
+         *
+         */
         function __construct()
         {
 
         }
-
+    
+        /**
+         * @return void
+         */
         function __deconstruct(): void
         {
 

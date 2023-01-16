@@ -13,7 +13,7 @@
     use IoJaegers\Lighthouse\Router\States\HttpState;
 
 
-/**
+    /**
      *
      */
     class RequestUrlFactory
@@ -151,16 +151,25 @@
         }
 
         //
+        /**
+         * @return string|null
+         */
         public static function queueInterface(): ?string
         {
             return $_SERVER[ 'GATEWAY_INTERFACE' ];
         }
-
+    
+        /**
+         * @return string|null
+         */
         public static function queueHostname(): ?string
         {
             return $_SERVER[ 'HTTP_HOST' ];
         }
-
+    
+        /**
+         * @return string|null
+         */
         public static function queueRequestUri(): ?string
         {
             return $_SERVER[ 'REQUEST_URI' ];
