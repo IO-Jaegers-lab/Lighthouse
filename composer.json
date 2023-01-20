@@ -6,8 +6,8 @@
     {
         "psr-4":
         {
-            "IoJaegers\\": "/",
-            "IoJaegers\\Lighthouse\\": "src/"
+            "IoJaegers\\": "code/",
+            "IoJaegers\\Lighthouse\\": "code/php/"
         }
     },
     "authors":
