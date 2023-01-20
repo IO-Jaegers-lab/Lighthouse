@@ -6,7 +6,7 @@
 
 
     /**
-     * Commands used by the driver and Engine.
+     * Headers used by the driver and Engine.
      */
     final class SessionMaintenance
     {
