@@ -3,8 +3,7 @@
      *
      */
     namespace IoJaegers\Lighthouse;
-
-    use IoJaegers\Lighthouse\Autoloaders\Autoloader;
+    
     use IoJaegers\Lighthouse\Backend\Session\SessionMaintenance;
     use IoJaegers\Lighthouse\Backend\Setup\SetupExtensionController;
     

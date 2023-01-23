@@ -27,6 +27,7 @@
         public function load(): void
         {
             $this->validateEngineControllerIsInstantiated();
+            
             $loader = $this->getEngineController()->instantiateLoader();
             $loader->load();
         }
